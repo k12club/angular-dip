@@ -36,14 +36,12 @@ import { AppRoutingModule } from "./app.routing";
 // Import 3rd party components
 import { BsDropdownModule } from "ngx-bootstrap/dropdown";
 import { TabsModule } from "ngx-bootstrap/tabs";
-import { ChartsModule } from "ng2-charts";
-import { ManageDatabaseComponent } from "./views/admin/manage-database/manage-database.component";
+import { ChartsModule, ThemeService } from "ng2-charts";
 import { DataTablesModule } from "angular-datatables";
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { MainComponent } from "./views/admin/main/main.component";
-import { SubCategoryComponent } from "./views/admin/sub-category/sub-category.component";
 import { DatatableService } from "./services/datatable.service";
-import { DataTableModule } from "angular2-datatable";
+import { DataTableModule } from "ng-angular8-datatable";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from "./views/login/login.component";
 
@@ -56,7 +54,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 /* Auth service */
 import { AuthenticationService } from "./shared/authentication.service";
 import { AuthGuard } from "./shared/core/auth.guard";
-import { AuthService } from './shared/core/auth.service';
+import { AuthService } from "./shared/core/auth.service";
 @NgModule({
   imports: [
     BrowserModule,
@@ -85,9 +83,7 @@ import { AuthService } from './shared/core/auth.service';
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
-    ManageDatabaseComponent,
     MainComponent,
-    SubCategoryComponent,
     LoginComponent
   ],
   providers: [
@@ -98,7 +94,8 @@ import { AuthService } from './shared/core/auth.service';
     DatatableService,
     AuthenticationService,
     AuthGuard,
-    AuthService
+    AuthService,
+    ThemeService
   ],
   bootstrap: [AppComponent]
 })

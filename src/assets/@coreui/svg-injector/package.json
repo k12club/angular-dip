@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      "@coreui/svg-injector@1.0.0-alpha.2",
+      "/Users/palm/Downloads/coreui-pro-bootstrap-3.0.0-alpha/_bootstrap-admin-template"
+    ]
+  ],
+  "_development": true,
+  "_from": "@coreui/svg-injector@1.0.0-alpha.2",
+  "_id": "@coreui/svg-injector@1.0.0-alpha.2",
+  "_inBundle": false,
+  "_integrity": "sha512-zVWOcgEY7lCmx047cxQ0M19o1t0d4uFgAqdE/GbrwIr80zWXOHNGIImsxOliJoRCrSu2HsMLqabnO016N0qGIA==",
+  "_location": "/@coreui/svg-injector",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@coreui/svg-injector@1.0.0-alpha.2",
+    "name": "@coreui/svg-injector",
+    "escapedName": "@coreui%2fsvg-injector",
+    "scope": "@coreui",
+    "rawSpec": "1.0.0-alpha.2",
+    "saveSpec": null,
+    "fetchSpec": "1.0.0-alpha.2"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coreui/svg-injector/-/svg-injector-1.0.0-alpha.2.tgz",
+  "_spec": "1.0.0-alpha.2",
+  "_where": "/Users/palm/Downloads/coreui-pro-bootstrap-3.0.0-alpha/_bootstrap-admin-template",
+  "author": {
+    "name": "Lukasz Holeczek"
+  },
+  "bugs": {
+    "url": "https://github.com/%40coreui/coreui-svg-injector/issues"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "js-beautify": "^1.10.0",
+    "jsdom": "^15.1.1"
+  },
+  "description": "",
+  "homepage": "https://github.com/%40coreui/coreui-svg-injector#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@coreui/svg-injector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%40coreui/coreui-svg-injector.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0-alpha.2"
+}

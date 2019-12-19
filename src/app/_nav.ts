@@ -31,29 +31,31 @@ export interface NavData {
 
 export const navItems: NavData[] = [
   {
-    name: 'หน้าหลัก',
-    url: '/admin/main',
-    icon: 'icon-home',
+    name: "หน้าหลัก",
+    url: "/admin/main",
+    icon: "icon-home"
     // badge: {
     //   variant: 'info',
     //   text: 'NEW'
     // }
   },
   {
-    name: 'จัดการฐานข้อมูล',
-    url: '/admin',
-    icon: 'icon-layers',
+    name: "จัดการฐานข้อมูล",
+    url: "/admin",
+    icon: "icon-layers",
     children: [
       {
-        name: 'คลาสผลิตภัณฑ์',
-        url: '/admin/managedatabase',
-        icon: 'icon-list'
-      },
+        name: "คลาสผลิตภัณฑ์",
+        url: "/admin/managedatabase",
+        icon: "icon-list",
+        // title:'test'
+      }
     ]
     // badge: {
     //   variant: 'info',
     //   text: 'NEW'
     // }
-  }
+  },
+  
   
 ];

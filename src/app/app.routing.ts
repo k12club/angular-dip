@@ -37,8 +37,8 @@ export const routes: Routes = [
     children: [
       {
         path: "admin/main",
-        component: MainComponent,
-        canActivate: [AuthGuard]
+        component: MainComponent
+        // canActivate: [AuthGuard]
       },
       // {
       //   path: 'dashboard',
@@ -46,8 +46,22 @@ export const routes: Routes = [
       // },
       {
         path: "admin/managedatabase",
-        component: ManageDatabaseComponent,
-        canActivate: [AuthGuard],
+        loadChildren: () =>
+          import("./views/admin/manage-database/manage-database.module").then(
+            m => m.ManageDatabaseModule
+          ),
+        // canActivate: [AuthGuard],
+        data: {
+          title: "คลาสผลิตภัณฑ์"
+        }
+      },
+      {
+        path: "admin/managedatabase/class/:id",
+        loadChildren: () =>
+          import("./views/admin/sub-category/sub-category.module").then(
+            m => m.SubCategoryModule
+          ),
+        // canActivate: [AuthGuard],
         data: {
           title: "คลาสผลิตภัณฑ์"
         }

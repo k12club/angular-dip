@@ -12,3 +12,6 @@
 //   .pull-right {
 //     float: right;
 // }
+input.ng-invalid.ng-touched{
+    border: solid 1px red;
+}

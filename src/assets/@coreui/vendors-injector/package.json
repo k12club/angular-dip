@@ -1,0 +1,57 @@
+{
+  "_args": [
+    [
+      "@coreui/vendors-injector@1.0.0-alpha.1",
+      "/Users/palm/Downloads/coreui-pro-bootstrap-3.0.0-alpha/_bootstrap-admin-template"
+    ]
+  ],
+  "_development": true,
+  "_from": "@coreui/vendors-injector@1.0.0-alpha.1",
+  "_id": "@coreui/vendors-injector@1.0.0-alpha.1",
+  "_inBundle": false,
+  "_integrity": "sha512-XMQyxVaD6IkWTTp5ArJ4RBBnHARo9BPKlQq8pDMQPfg6mogZ1etOQUB2iv0E682WKyNgHuBR87nFZdfuFJUShQ==",
+  "_location": "/@coreui/vendors-injector",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@coreui/vendors-injector@1.0.0-alpha.1",
+    "name": "@coreui/vendors-injector",
+    "escapedName": "@coreui%2fvendors-injector",
+    "scope": "@coreui",
+    "rawSpec": "1.0.0-alpha.1",
+    "saveSpec": null,
+    "fetchSpec": "1.0.0-alpha.1"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coreui/vendors-injector/-/vendors-injector-1.0.0-alpha.1.tgz",
+  "_spec": "1.0.0-alpha.1",
+  "_where": "/Users/palm/Downloads/coreui-pro-bootstrap-3.0.0-alpha/_bootstrap-admin-template",
+  "author": {
+    "name": "Lukasz Holeczek"
+  },
+  "bugs": {
+    "url": "https://github.com/%40coreui/coreui-vendors-injector/issues"
+  },
+  "description": "",
+  "devDependencies": {
+    "chalk": "^2.4.2",
+    "fs-extra": "^8.0.1",
+    "js-beautify": "^1.10.0",
+    "jsdom": "^15.1.1"
+  },
+  "homepage": "https://github.com/%40coreui/coreui-vendors-injector#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@coreui/vendors-injector",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/%40coreui/coreui-vendors-injector.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0-alpha.1"
+}

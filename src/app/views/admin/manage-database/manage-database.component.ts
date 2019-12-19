@@ -5,6 +5,8 @@ import {
   BsModalRef
 } from "ngx-bootstrap/modal";
 
+import { Router } from "@angular/router";
+import { FormBuilder, Validators, FormGroup, FormControl } from "@angular/forms";
 @Component({
   selector: "app-manage-database",
   templateUrl: "./manage-database.component.html",
@@ -12,8 +14,16 @@ import {
 })
 export class ManageDatabaseComponent implements OnInit {
   modalRef: BsModalRef;
-  
-  constructor(private modalService: BsModalService) {}
+  checkoutForm: FormGroup;
+  forbiddenUsernames = ['bamossza', 'admin', 'superadmin'];
+
+  constructor(
+    private modalService: BsModalService,
+    private router: Router,
+    private fb: FormBuilder
+  ) {
+   this.createForm()
+  }
   dtOptions: DataTables.Settings = {};
   data = [
     { code: "01", name: "เครื่องบินรบ" },
@@ -22,6 +32,18 @@ export class ManageDatabaseComponent implements OnInit {
     { code: "04", name: "จรวด" },
     { code: "05", name: "เรือเหาะ" }
   ];
+  forbiddenNames(control: FormControl): { [s: string]: boolean } {
+    if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
+        return {'forbiddenNames': true};
+    }
+    return null;
+}
+  createForm() {
+    this.checkoutForm = new FormGroup({
+      'code': new FormControl(null, [Validators.required, this.forbiddenNames.bind(this)]),
+      'name': new FormControl(null, Validators.required)
+  });
+  }
   openModal(createmodal: TemplateRef<any>) {
     this.modalRef = this.modalService.show(
       createmodal,
@@ -30,7 +52,19 @@ export class ManageDatabaseComponent implements OnInit {
   }
   ngOnInit(): void {
     this.dtOptions = {
+      // paging: false
       // pagingType: 'full_numbers'
     };
+  }
+  onSubmit(customerData:any) {
+    // Process checkout data here
+    console.log('Your order has been submitted', customerData);
+    this.checkoutForm.reset();
+    // this.modalRef.hide()
+  }
+
+  gotoClass(id: any) {
+    // alert(id)
+    this.router.navigate([`admin/managedatabase/class/${id}`]);
   }
 }
