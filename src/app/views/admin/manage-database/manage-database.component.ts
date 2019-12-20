@@ -7,6 +7,7 @@ import {
 
 import { Router } from "@angular/router";
 import { FormBuilder, Validators, FormGroup, FormControl } from "@angular/forms";
+import { ManagedatabaseService } from '../../../services/managedatabase.service';
 @Component({
   selector: "app-manage-database",
   templateUrl: "./manage-database.component.html",
@@ -16,22 +17,16 @@ export class ManageDatabaseComponent implements OnInit {
   modalRef: BsModalRef;
   checkoutForm: FormGroup;
   forbiddenUsernames = ['bamossza', 'admin', 'superadmin'];
-
+  public results:any;// กำหนดตัวแปร เพื่อรับค่า
   constructor(
     private modalService: BsModalService,
     private router: Router,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private managedatabaseservice:ManagedatabaseService
   ) {
    this.createForm()
   }
   dtOptions: DataTables.Settings = {};
-  data = [
-    { code: "01", name: "เครื่องบินรบ" },
-    { code: "02", name: "รถถัง" },
-    { code: "03", name: "เรือดำน้ำ" },
-    { code: "04", name: "จรวด" },
-    { code: "05", name: "เรือเหาะ" }
-  ];
   forbiddenNames(control: FormControl): { [s: string]: boolean } {
     if (this.forbiddenUsernames.indexOf(control.value) !== -1) {
         return {'forbiddenNames': true};
@@ -55,6 +50,9 @@ export class ManageDatabaseComponent implements OnInit {
       // paging: false
       // pagingType: 'full_numbers'
     };
+    this.managedatabaseservice.getData().subscribe(result=>{
+      this.results = result;
+    })
   }
   onSubmit(customerData:any) {
     // Process checkout data here
