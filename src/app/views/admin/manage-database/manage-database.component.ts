@@ -17,7 +17,7 @@ export class ManageDatabaseComponent implements OnInit {
   modalRef: BsModalRef;
   checkoutForm: FormGroup;
   forbiddenUsernames = ['bamossza', 'admin', 'superadmin'];
-  public results:any;// กำหนดตัวแปร เพื่อรับค่า
+  results:any;// กำหนดตัวแปร เพื่อรับค่า
   constructor(
     private modalService: BsModalService,
     private router: Router,
